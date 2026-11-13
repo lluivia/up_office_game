@@ -49,18 +49,7 @@ public class InteractiveObject : MonoBehaviour
             float tiltY = Camera.main.transform.forward.y * tiltAmount;
             Vector3 finalPosition = new Vector3(mouseX, mouseY + tiltY, 0);
 
-            this.transform.localPosition = Vector3.Lerp(this.transform.localPosition, finalPosition, Time.deltaTime * smoothAmount);
-            
+            this.transform.localPosition = Vector3.Lerp(this.transform.localPosition, finalPosition, Time.deltaTime * smoothAmount);   
         }
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-       
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        
     }
 }
